@@ -11,6 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 		await productModel.deleteMany();
 		await productModel.insertMany(products);
 		await db.dbDisconnect();
+
 		res.status(200).json("Data loaded");
 	} catch (error) {
 		res.status(500).json("There was an error loading the data");

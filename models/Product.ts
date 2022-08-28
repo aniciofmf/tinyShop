@@ -1,5 +1,5 @@
 import mongoose, { Model, Schema } from "mongoose";
-import { ProductBase } from "./../interfaces/Product";
+import { Product } from "./../interfaces/Product";
 
 const productSchema = new Schema(
 	{
@@ -41,6 +41,6 @@ const productSchema = new Schema(
 
 productSchema.index({ title: "text", tags: "text" });
 
-const Product: Model<ProductBase> = mongoose.models.Product || mongoose.model("Product", productSchema);
+const Product: Model<Product> = mongoose.models.Product || mongoose.model("Product", productSchema);
 
 export default Product;
