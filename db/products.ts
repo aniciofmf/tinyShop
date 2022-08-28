@@ -15,7 +15,7 @@ export const seedData: ProductSeedData = {
 			sizes: ["XS", "S", "M", "L", "XL", "XXL"],
 			slug: "mens_chill_crew_neck_sweatshirt",
 			type: "shirts",
-			tags: ["sweatshirt"],
+			tags: ["sweatshirt", "sweatshirt3", "rjk"],
 			title: "Men’s Chill Crew Neck Sweatshirt",
 			gender: "men",
 		},
