@@ -8,8 +8,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 	try {
 		await db.dbConnect();
-		productModel.deleteMany();
-		productModel.insertMany(products);
+		await productModel.deleteMany();
+		await productModel.insertMany(products);
 		await db.dbDisconnect();
 		res.status(200).json("Data loaded");
 	} catch (error) {
