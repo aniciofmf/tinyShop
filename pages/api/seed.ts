@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { ProductBase } from "../../interfaces/";
 import { db, productsData } from "../../db";
 import { productModel } from "../../models";
 
