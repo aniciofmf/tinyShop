@@ -13,6 +13,8 @@ export interface ProductBase {
 
 export interface Product extends ProductBase {
 	_id: string;
+	createdAt: string;
+	updatedAt: string;
 }
 
 export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
