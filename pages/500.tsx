@@ -5,7 +5,7 @@ import { MainLayout } from "../components/";
 
 export const Page404: NextPage = () => {
 	return (
-		<MainLayout title="Shop - 404">
+		<MainLayout title="Shop - 500">
 			<Box
 				display="flex"
 				justifyContent="center"
@@ -14,10 +14,10 @@ export const Page404: NextPage = () => {
 				sx={{ marginTop: 20, flexDirection: { xs: "column", sm: "row" } }}
 			>
 				<Typography variant="h1" component="h1" fontSize={60} fontWeight={100}>
-					404 |
+					500 |
 				</Typography>
 				<Typography marginLeft={2} marginTop={1} fontSize={25}>
-					Page Not Found
+					Oops! Something went wrong
 				</Typography>
 			</Box>
 		</MainLayout>
