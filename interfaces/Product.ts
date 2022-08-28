@@ -11,7 +11,9 @@ export interface ProductBase {
 	gender: "men" | "women" | "kid" | "unisex";
 }
 
-export interface Product extends ProductBase {}
+export interface Product extends ProductBase {
+	_id: string;
+}
 
 export type Size = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
 
