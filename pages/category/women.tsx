@@ -1,16 +1,16 @@
 import { NextPage } from "next";
 import { Typography, Divider } from "@mui/material";
 
-import { MainLayout, ProductList, Loader } from "../components/";
-import { useProducts } from "../hooks/";
+import { MainLayout, ProductList, Loader } from "../../components/";
+import { useProducts } from "../../hooks/";
 
-const HomePage: NextPage = () => {
-	const { products, isLoading } = useProducts("/products");
+const WomenPage: NextPage = () => {
+	const { products, isLoading } = useProducts("/products?gender=women");
 
 	return (
-		<MainLayout title={"Shop - Home"} description={"The best clothes at best price"}>
+		<MainLayout title={"Shop - Womens"} description={"The best clothes at best price for womens"}>
 			<Typography variant="h1" component="h1">
-				Shop
+				Womens
 			</Typography>
 
 			<Typography variant="h2" sx={{ mb: 1 }}>
@@ -23,4 +23,4 @@ const HomePage: NextPage = () => {
 	);
 };
 
-export default HomePage;
+export default WomenPage;

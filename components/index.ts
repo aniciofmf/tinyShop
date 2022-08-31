@@ -12,3 +12,5 @@ export * from "./products/SizePicker";
 
 export * from "./cart/List";
 export * from "./cart/Summary";
+
+export * from "./ui/Loader";
