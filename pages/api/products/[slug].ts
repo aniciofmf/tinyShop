@@ -19,7 +19,7 @@ async function getProductsBySlug(req: NextApiRequest, res: NextApiResponse<{ msg
 		const { slug } = req.query;
 
 		await db.dbConnect();
-		const product = await productModel.findOne({ slug: slug }).select("_id title price stock slug images").lean();
+		const product = await productModel.findOne({ slug: slug }).select("_id title price stock slug images sizes").lean();
 		await db.dbDisconnect();
 
 		if (product) {
