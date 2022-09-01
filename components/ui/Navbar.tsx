@@ -1,20 +1,24 @@
+import { useContext } from "react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-import { AppBar, Badge, Box, Button, IconButton, Link, Toolbar, Typography } from "@mui/material";
+import { AppBar, Badge, Box, Button, IconButton, Link, Toolbar } from "@mui/material";
 import SearchOutlined from "@mui/icons-material/SearchOutlined";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
+import { UIContext } from "../../context/";
+
 export const Navbar = () => {
 	const router = useRouter();
+	const { openMenu } = useContext(UIContext);
 
 	return (
 		<AppBar>
 			<Toolbar>
 				<NextLink href="/" passHref>
 					<Link display="flex" alignItems="center">
-						<Button startIcon={<MenuOutlinedIcon />} sx={{ fontSize: "16px", color: "black" }}>
+						<Button onClick={openMenu} startIcon={<MenuOutlinedIcon />} sx={{ fontSize: "16px", color: "black" }}>
 							Menu
 						</Button>
 					</Link>

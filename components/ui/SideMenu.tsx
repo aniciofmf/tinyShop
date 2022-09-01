@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import {
 	Box,
 	Divider,
@@ -23,9 +23,13 @@ import MaleOutlinedIcon from "@mui/icons-material/MaleOutlined";
 import FemaleOutlinedIcon from "@mui/icons-material/FemaleOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
+import { UIContext } from "../../context/";
+
 export const SideMenu: FC = () => {
+	const { menuOpen, closeMenu } = useContext(UIContext);
+
 	return (
-		<Drawer open={false} sx={{ backdropFilter: "blur(2px)", transition: "all 0.5s ease-out" }}>
+		<Drawer open={menuOpen} onClose={closeMenu} sx={{ backdropFilter: "blur(2px)", transition: "all 0.5s ease-out" }}>
 			<Box sx={{ width: 250, paddingTop: 5 }}>
 				<List>
 					<ListItem>
