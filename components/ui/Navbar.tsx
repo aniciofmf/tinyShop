@@ -16,7 +16,7 @@ export const Navbar = () => {
 	return (
 		<AppBar>
 			<Toolbar>
-				<NextLink href="/" passHref>
+				<NextLink href="" passHref>
 					<Link display="flex" alignItems="center">
 						<Button onClick={openMenu} startIcon={<MenuOutlinedIcon />} sx={{ fontSize: "16px", color: "black" }}>
 							Menu
